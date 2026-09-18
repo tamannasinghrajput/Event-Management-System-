@@ -1,0 +1,50 @@
+[
+  {
+    "id": "demo-user-1",
+    "name": "Rahul Kumar",
+    "email": "student@srmist.edu.in",
+    "password": "$2a$10$1dRyPzrIO1gQ4YIGc83dieQo9QGdYc2gtNNCYK0Ty7G5DcViZpgkS",
+    "regNumber": "RA2211003010001",
+    "department": "cse",
+    "year": "3",
+    "phone": "+91 98765 43210",
+    "role": "student",
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "demo-user-2",
+    "name": "Harsh",
+    "email": "harsh@srmist.edu.in",
+    "password": "$2a$10$CsdospheemXdyXqKo8bwAOTaWMfxPmrVjR1DcfXS8CcUEdP8wFMwS",
+    "regNumber": "RA2211003010002",
+    "department": "cse",
+    "year": "3",
+    "phone": "+91 98765 43211",
+    "role": "student",
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "demo-admin",
+    "name": "Admin",
+    "email": "admin@srmist.edu.in",
+    "password": "$2a$10$Zk0568horWphANlqwsU1Mu3u5AHWcgw5PGVAOnf2BlAAEexYhJ4OK",
+    "regNumber": "ADMIN001",
+    "department": "admin",
+    "year": "",
+    "phone": "+91 44 2741 1000",
+    "role": "admin",
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "0cd13a6a-b8c1-4624-9afd-eb811238397a",
+    "name": "HARSH YADAV",
+    "email": "hy4784@srmist.edu.in",
+    "password": "$2a$10$nHGrSgAycxHA67u7VDSXqONx9IGoLkK9FbMU4UAb8nkhfbEGrvuHe",
+    "regNumber": "RA2311003011546",
+    "department": "cse",
+    "year": "3",
+    "phone": "",
+    "role": "student",
+    "createdAt": "2026-04-26T11:00:56.451Z"
+  }
+]

@@ -1,0 +1,503 @@
+import type { Event } from '@/types';
+
+export interface Club {
+  id: string;
+  name: string;
+  category: 'technical' | 'cultural' | 'sports' | 'social' | 'professional';
+  description: string;
+  logo?: string;
+  events: string[];
+}
+
+// Real SRM Events 2026-2026 based on actual data
+export const events: Event[] = [
+  // Major Fests
+  {
+    id: 'fest-1',
+    title: 'Aaruush 2026 - Techno-Management Fest',
+    description: '19th edition of one of India\'s largest national-level techno-management fests. Theme: "Rising in the Spirit of Innovation". Features Cognixion, Hack Summit, T-Summit, workshops, Tech Rally with TVS Apache, InfraNova & Relief Rethink, Data Vortex, and Government & Indian Coast Guard Expos. Inaugurated by Mr. Sridhar Vembu (Zoho) and Dr. A. Sivathanu Pillai (BrahMos).',
+    date: '2026-09-10',
+    time: '09:00 AM',
+    venue: 'Tech Park, Kattankulathur Campus',
+    category: 'technical',
+    image: '/assets/images/event-techfest.png',
+    seats: 30000,
+    registered: 25000,
+    prizes: 'Rs.15,00,000+',
+    teamSize: 'Varies by event'
+  },
+  {
+    id: 'fest-2',
+    title: 'Hack Horizons 2026',
+    description: '12-hour hackathon with domains like Generative AI, Agentic AI and Cybersecurity. Organized by SRMIST Vadapalani Campus. Prize pool of Rs.15,000+. Certificates provided to all participants.',
+    date: '2026-10-09',
+    time: '09:00 AM',
+    venue: 'Vadapalani Campus, Chennai',
+    category: 'hackathon',
+    image: '/assets/images/event-hackathon.png',
+    seats: 500,
+    registered: 423,
+    prizes: 'Rs.15,000+',
+    teamSize: '2-4 members'
+  },
+  {
+    id: 'fest-3',
+    title: 'Hack & Beyond 2026',
+    description: 'Workshop and hackathon on Automotive Embedded Systems and AI-powered Embedded Solutions. Industry guests: Mr. Shankar Moorthy (Royal Enfield) and Mr. Esakki Raja (Thynk Loop). Includes hands-on training with STM32 microcontroller.',
+    date: '2026-08-11',
+    time: '09:00 AM',
+    venue: 'Kattankulathur Campus',
+    category: 'hackathon',
+    image: '/assets/images/event-autonomous.png',
+    seats: 200,
+    registered: 178,
+    prizes: 'Rs.50,000',
+    teamSize: '2-4 members'
+  },
+  // Workshops & Conferences 2026
+  {
+    id: 'ws-1',
+    title: 'Ethical Hacking Workshop 2026',
+    description: 'Learn ethical hacking techniques, penetration testing, and cybersecurity fundamentals. Hands-on sessions with real-world scenarios. Certificates provided.',
+    date: '2026-09-27',
+    time: '10:00 AM',
+    venue: 'Computer Labs, Tech Block',
+    category: 'technical',
+    image: '/assets/images/event-cybersecurity.png',
+    seats: 100,
+    registered: 89,
+    teamSize: 'Individual'
+  },
+  {
+    id: 'ws-2',
+    title: 'IoT using Raspberry Pi and Python',
+    description: 'Comprehensive workshop on IoT development using Raspberry Pi and Python. Build smart devices and automation systems.',
+    date: '2026-09-27',
+    time: '02:00 PM',
+    venue: 'IoT Lab, Networking Block',
+    category: 'technical',
+    image: '/assets/images/event-iot.png',
+    seats: 80,
+    registered: 67,
+    teamSize: 'Individual'
+  },
+  {
+    id: 'ws-3',
+    title: 'Advanced Excel Workshop 2026',
+    description: 'Master advanced Excel functions, data analysis, pivot tables, and macros. Essential for data-driven decision making.',
+    date: '2026-09-27',
+    time: '10:00 AM',
+    venue: 'Seminar Hall A',
+    category: 'technical',
+    image: '/assets/images/event-data.png',
+    seats: 120,
+    registered: 98,
+    teamSize: 'Individual'
+  },
+  {
+    id: 'ws-4',
+    title: 'Cyber Security Workshop',
+    description: 'Learn about network security, cryptography, and threat detection. Industry experts share real-world case studies.',
+    date: '2026-09-28',
+    time: '10:00 AM',
+    venue: 'Cyber Lab, IT Block',
+    category: 'technical',
+    image: '/assets/images/event-cybersecurity.png',
+    seats: 100,
+    registered: 87,
+    teamSize: 'Individual'
+  },
+  {
+    id: 'ws-5',
+    title: 'AI in Healthcare Workshop',
+    description: 'Explore applications of Artificial Intelligence in healthcare, medical imaging, and diagnostics.',
+    date: '2026-09-28',
+    time: '02:00 PM',
+    venue: 'SH Block, Room 301',
+    category: 'technical',
+    image: '/assets/images/event-ai-health.png',
+    seats: 80,
+    registered: 72,
+    teamSize: 'Individual'
+  },
+  {
+    id: 'ws-6',
+    title: 'Autonomous Vehicle using Python',
+    description: 'Build and program autonomous vehicles using Python, OpenCV, and machine learning algorithms.',
+    date: '2026-09-28',
+    time: '10:00 AM',
+    venue: 'Mechanical Block Lab',
+    category: 'technical',
+    image: '/assets/images/event-autonomous.png',
+    seats: 60,
+    registered: 54,
+    teamSize: '2-3 members'
+  },
+  // 2026 Events
+  {
+    id: '2026-1',
+    title: '5 Days Workshop on Scientific Machine Learning',
+    description: 'Advanced workshop on Scientific Machine Learning (Hybrid mode). Learn ML applications in scientific computing and research.',
+    date: '2026-01-20',
+    time: '09:00 AM',
+    venue: 'Tech Park, Online/Offline',
+    category: 'technical',
+    image: '/assets/images/event-ai-health.png',
+    seats: 150,
+    registered: 123,
+    teamSize: 'Individual'
+  },
+  {
+    id: '2026-2',
+    title: 'Quantum Crossroads Workshop',
+    description: 'Workshop on Materials, Computation, Information and Communication in Quantum Computing.',
+    date: '2026-01-21',
+    time: '10:00 AM',
+    venue: 'Physics Department, Kattankulathur',
+    category: 'technical',
+    image: '/assets/images/event-quantum.png',
+    seats: 100,
+    registered: 78,
+    teamSize: 'Individual'
+  },
+  {
+    id: '2026-3',
+    title: 'ICECBI 2026 - International Conference',
+    description: 'International Conference on Electronics, Computing and Big Data Intelligence. Paper presentations and keynote talks.',
+    date: '2026-02-02',
+    time: '09:00 AM',
+    venue: 'TP Ganesan Auditorium',
+    category: 'technical',
+    image: '/assets/images/event-conference.png',
+    seats: 500,
+    registered: 423,
+    prizes: 'Best Paper Awards',
+    teamSize: 'Individual/Team'
+  },
+  {
+    id: '2026-4',
+    title: 'International Conference on Bioengineering',
+    description: '3-day international conference on Bioengineering innovations, research, and applications.',
+    date: '2026-03-11',
+    time: '09:00 AM',
+    venue: 'University Building, Kattankulathur',
+    category: 'technical',
+    image: '/assets/images/event-bioengineering.png',
+    seats: 300,
+    registered: 256,
+    prizes: 'Research Grants',
+    teamSize: 'Individual'
+  },
+  {
+    id: '2026-5',
+    title: 'ICAME 2026 - Mechanical Engineering Conference',
+    description: '6th International Conference on Advances in Mechanical Engineering. Theme: Sustainable Manufacturing.',
+    date: '2026-03-18',
+    time: '09:00 AM',
+    venue: 'Mechanical Block, Kattankulathur',
+    category: 'technical',
+    image: '/assets/images/event-robotics-new.png',
+    seats: 250,
+    registered: 198,
+    prizes: 'Best Research Awards',
+    teamSize: 'Individual/Team'
+  },
+  // Cultural Events
+  {
+    id: 'cult-1',
+    title: 'Milan 2026 - National Cultural Fest',
+    description: '18th edition of SRMIST\'s premier national-level cultural festival. Four days of artistic expression featuring 40+ events, pro-shows with celebrity performers, dance competitions, music battles, fashion shows.',
+    date: '2026-04-02',
+    time: '06:00 PM',
+    venue: 'Kattankulathur Campus, Multiple Venues',
+    category: 'cultural',
+    image: '/assets/images/event-cultural-fest.png',
+    seats: 50000,
+    registered: 35000,
+    prizes: 'Rs.10,00,000+',
+    teamSize: 'Varies by event'
+  },
+  {
+    id: 'cult-2',
+    title: 'Alumni Day 2026',
+    description: 'Annual Alumni Day celebration. Reconnect with old friends, network with alumni, and celebrate SRM\'s legacy.',
+    date: '2026-12-20',
+    time: '10:00 AM',
+    venue: 'TP Ganesan Auditorium',
+    category: 'cultural',
+    image: '/assets/images/event-alumni.png',
+    seats: 2000,
+    registered: 1567,
+    teamSize: 'Open'
+  },
+  // Sports Events
+  {
+    id: 'sport-1',
+    title: 'SRM RUN 9.0 - Run for Zero Waste',
+    description: 'Annual marathon promoting environmental awareness. Theme: "Run for Zero Waste". Open to all students and faculty.',
+    date: '2026-08-31',
+    time: '06:00 AM',
+    venue: 'University Grounds, Kattankulathur',
+    category: 'sports',
+    image: '/assets/images/event-sports.png',
+    seats: 3000,
+    registered: 2345,
+    prizes: 'Medals & Certificates',
+    teamSize: 'Individual'
+  },
+  {
+    id: 'sport-2',
+    title: 'Chairman\'s Birthday Trophy 2026',
+    description: 'State Level Volleyball and Handball Tournament. Certificates and trophies for winners.',
+    date: '2026-09-27',
+    time: '08:00 AM',
+    venue: 'Indoor Stadium, Kattankulathur',
+    category: 'sports',
+    image: '/assets/images/event-sports.png',
+    seats: 500,
+    registered: 423,
+    prizes: 'Trophies & Certificates',
+    teamSize: 'Team'
+  },
+  // Technical Club Events
+  {
+    id: 'tech-1',
+    title: 'ACM CodeRush 2026',
+    description: 'Annual competitive programming contest by SRM ACM Student Chapter. Test your algorithmic skills.',
+    date: '2026-11-15',
+    time: '10:00 AM',
+    venue: 'Computer Labs, Tech Block',
+    category: 'technical',
+    image: '/assets/images/event-hackathon.png',
+    seats: 300,
+    registered: 245,
+    prizes: 'Rs.75,000',
+    teamSize: 'Individual'
+  },
+  {
+    id: 'tech-2',
+    title: 'White Hat Hackers CTF 2026',
+    description: 'Capture The Flag competition. Categories: Web Exploitation, Cryptography, Reverse Engineering, Forensics.',
+    date: '2026-11-22',
+    time: '09:30 AM',
+    venue: 'Cyber Lab, IT Block',
+    category: 'technical',
+    image: '/assets/images/event-cybersecurity.png',
+    seats: 150,
+    registered: 132,
+    prizes: 'Rs.1,00,000',
+    teamSize: '1-3 members'
+  },
+  {
+    id: 'tech-3',
+    title: 'IEEE Robotics Challenge 2026',
+    description: 'Design and build autonomous robots. Workshop on robotics fundamentals included.',
+    date: '2026-12-10',
+    time: '10:00 AM',
+    venue: 'Mechanical Hangar, ECE Block',
+    category: 'technical',
+    image: '/assets/images/event-robotics-new.png',
+    seats: 80,
+    registered: 67,
+    prizes: 'Rs.1,50,000',
+    teamSize: '3-5 members'
+  },
+  {
+    id: 'tech-4',
+    title: 'Beyond Hack 2026',
+    description: '24-hour national-level hackathon by SRM Hackathon Club. Themes: HealthTech, EduTech, FinTech, GreenTech.',
+    date: '2026-10-31',
+    time: '10:00 AM',
+    venue: 'Mini Hall 2, University Building',
+    category: 'hackathon',
+    image: '/assets/images/event-hackathon.png',
+    seats: 200,
+    registered: 178,
+    prizes: 'Rs.3,00,000',
+    teamSize: '2-4 members'
+  },
+  {
+    id: 'tech-5',
+    title: 'National Students Space Challenge 2026',
+    description: 'National-level competition for space technology enthusiasts. Design satellites, rovers, and space systems.',
+    date: '2026-11-07',
+    time: '09:00 AM',
+    venue: 'Tech Park, Kattankulathur',
+    category: 'technical',
+    image: '/assets/images/event-space.png',
+    seats: 150,
+    registered: 123,
+    prizes: 'Rs.2,00,000 + ISRO Internships',
+    teamSize: '3-5 members'
+  }
+];
+
+// Real SRM Clubs Data
+export const clubs: Club[] = [
+  // Technical Clubs
+  {
+    id: 'club-1',
+    name: 'SRM ACM Student Chapter',
+    category: 'technical',
+    description: 'Official ACM student chapter promoting competitive programming, algorithms, and computer science excellence.',
+    events: ['CodeRush', 'Tech Talks', 'Workshops']
+  },
+  {
+    id: 'club-2',
+    name: 'White Hat Hackers Club',
+    category: 'technical',
+    description: 'Cybersecurity club with 300+ members focusing on ethical hacking, CTF competitions, and security awareness.',
+    events: ['CTF Competitions', 'Security Workshops', 'Bug Bounty']
+  },
+  {
+    id: 'club-3',
+    name: 'IEEE Student Branch',
+    category: 'technical',
+    description: 'Professional body for electronics and computing. Organizes workshops, conferences, and research seminars.',
+    events: ['Robotics Challenge', 'Paper Presentations', 'Tech Seminars']
+  },
+  {
+    id: 'club-4',
+    name: 'GitHub Community SRM',
+    category: 'technical',
+    description: 'GitHub Campus Community promoting open-source contributions and collaborative development.',
+    events: ['HackDays', 'Open Source Workshops', 'Git/GitHub Training']
+  },
+  {
+    id: 'club-5',
+    name: 'SRM Hackathon Club',
+    category: 'technical',
+    description: 'Club dedicated to organizing hackathons and coding competitions throughout the year.',
+    events: ['Beyond Hack', 'Semicolon', 'Ideathon']
+  },
+  {
+    id: 'club-6',
+    name: 'Team Camber Racing',
+    category: 'technical',
+    description: 'Formula Student team designing and building race cars. National champions at Formula Bharat 2026.',
+    events: ['Formula Bharat', 'Vehicle Launch', 'Test Sessions']
+  },
+  // Cultural Clubs
+  {
+    id: 'club-11',
+    name: 'Dance Club',
+    category: 'cultural',
+    description: 'Official dance club representing SRM in inter-college competitions and organizing dance events.',
+    events: ['Nritya Utsav', 'Dance Workshops', 'Flash Mobs']
+  },
+  {
+    id: 'club-12',
+    name: 'Music Club',
+    category: 'cultural',
+    description: 'Platform for musicians to collaborate, perform, and compete in various music competitions.',
+    events: ['Sargam Symphony', 'Battle of Bands', 'Open Mic Nights']
+  },
+  {
+    id: 'club-13',
+    name: 'Fashion Club',
+    category: 'cultural',
+    description: 'Fashion and design club organizing fashion shows and promoting sustainable fashion.',
+    events: ['Haute Couture', 'Fashion Shows', 'Design Workshops']
+  },
+  {
+    id: 'club-14',
+    name: 'Dramatics Club',
+    category: 'cultural',
+    description: 'Theatre and performing arts club for stage plays, street plays, and mime.',
+    events: ['Rang Manch', 'Street Plays', 'Theatre Workshops']
+  },
+  {
+    id: 'club-15',
+    name: 'Literary Club',
+    category: 'cultural',
+    description: 'Club for literature enthusiasts. Organizes debates, quizzes, creative writing, and poetry events.',
+    events: ['LitFest', 'Debates', 'Creative Writing']
+  },
+  {
+    id: 'club-16',
+    name: 'Creative Arts & Media',
+    category: 'cultural',
+    description: 'Visual arts club for painters, sketch artists, photographers, and digital artists.',
+    events: ['Canvas Carnival', 'Art Exhibitions', 'Photography Contests']
+  },
+  // Professional & Social
+  {
+    id: 'club-17',
+    name: 'Entrepreneurship Cell (E-Cell)',
+    category: 'professional',
+    description: 'Fosters entrepreneurial mindset through workshops, pitch events, and incubation support.',
+    events: ['Startup Weekend', 'Pitch Competitions', 'Founder Talks']
+  },
+  {
+    id: 'club-18',
+    name: 'SRM TEDx Club',
+    category: 'professional',
+    description: 'Organizes TEDx events bringing inspiring speakers to share ideas worth spreading.',
+    events: ['TEDx SRM', 'Salon Events', 'Speaker Sessions']
+  },
+  {
+    id: 'club-19',
+    name: 'Rotaract Club',
+    category: 'social',
+    description: 'Youth wing of Rotary International. Focuses on community service and social awareness.',
+    events: ['Blood Donation', 'Social Drives', 'Awareness Campaigns']
+  },
+  {
+    id: 'club-20',
+    name: 'Astrophilia Club',
+    category: 'technical',
+    description: 'Astronomy club organizing stargazing sessions, space talks, and astrophotography events.',
+    events: ['Stargazing', 'Space Talks', 'Astrophotography']
+  },
+  {
+    id: 'club-21',
+    name: 'Quiz Club',
+    category: 'cultural',
+    description: 'Quiz enthusiasts club organizing trivia competitions and knowledge challenges.',
+    events: ['Quiz Competitions', 'Trivia Nights', 'Knowledge Challenges']
+  },
+  {
+    id: 'club-22',
+    name: 'Gaming Club',
+    category: 'sports',
+    description: 'Esports and gaming club organizing tournaments for popular games.',
+    events: ['Esports Championship', 'Gaming Nights', 'Tournaments']
+  },
+  {
+    id: 'club-23',
+    name: 'Women Empowerment Club',
+    category: 'social',
+    description: 'Promotes gender equality and empowers women through various initiatives and events.',
+    events: ['Women\'s Day', 'Empowerment Workshops', 'Leadership Talks']
+  },
+  {
+    id: 'club-24',
+    name: 'Self Defense Club',
+    category: 'sports',
+    description: 'Teaches self-defense techniques and promotes personal safety awareness.',
+    events: ['Self Defense Workshops', 'Training Sessions', 'Awareness Drives']
+  },
+  {
+    id: 'club-25',
+    name: 'Social Club',
+    category: 'social',
+    description: 'Organizes social service activities and community outreach programs.',
+    events: ['Community Service', 'Outreach Programs', 'Charity Events']
+  }
+];
+
+// Categories for filtering
+export const categories = [
+  { id: 'all', label: 'All Events', icon: 'Calendar' },
+  { id: 'hackathon', label: 'Hackathons', icon: 'Code' },
+  { id: 'technical', label: 'Technical', icon: 'Cpu' },
+  { id: 'cultural', label: 'Cultural', icon: 'Music' },
+  { id: 'sports', label: 'Sports', icon: 'Trophy' }
+] as const;
+
+// User authentication mock data
+export const users = [
+  { email: 'student@srmist.edu.in', password: 'student123', name: 'Rahul Kumar', role: 'student', regNumber: 'RA2211003010001' },
+  { email: 'harsh@srmist.edu.in', password: 'harsh123', name: 'Harsh', role: 'student', regNumber: 'RA2211003010002' },
+  { email: 'admin@srmist.edu.in', password: 'admin123', name: 'Admin', role: 'admin', regNumber: 'ADMIN001' }
+];

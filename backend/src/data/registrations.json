@@ -1,0 +1,41 @@
+[
+  {
+    "id": "reg-demo-1",
+    "name": "Rahul Kumar",
+    "email": "student@srmist.edu.in",
+    "phone": "+91 98765 43210",
+    "regNumber": "RA2211003010001",
+    "department": "cse",
+    "year": "3",
+    "eventId": "fest-1",
+    "eventTitle": "Aaruush 2026 - Techno-Management Fest",
+    "status": "confirmed",
+    "registeredAt": "2026-08-15T10:30:00.000Z"
+  },
+  {
+    "id": "reg-demo-2",
+    "name": "Harsh",
+    "email": "harsh@srmist.edu.in",
+    "phone": "+91 98765 43211",
+    "regNumber": "RA2211003010002",
+    "department": "cse",
+    "year": "3",
+    "eventId": "fest-2",
+    "eventTitle": "Hack Horizons 2026",
+    "status": "confirmed",
+    "registeredAt": "2026-09-01T14:20:00.000Z"
+  },
+  {
+    "id": "62d52733-5cd0-4ec6-8707-551e04e83300",
+    "name": "HARSH YADAV",
+    "email": "hy4784@srmist.edu.in",
+    "phone": "6204242582",
+    "regNumber": "RA2311003011546",
+    "department": "cse",
+    "year": "3",
+    "eventId": "fest-2",
+    "eventTitle": "Hack Horizons 2026",
+    "status": "confirmed",
+    "registeredAt": "2026-04-26T11:49:35.014Z"
+  }
+]
