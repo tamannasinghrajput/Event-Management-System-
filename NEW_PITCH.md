@@ -552,6 +552,7 @@ cd frontend && npm run dev
 | Name | Role | Registration Number |
 |------|------|---------------------|
 | **Harsh Yadav** | Full-Stack Developer & Project Lead | RA2211003010001 |
+| **Tamanna Singh** | Full-Stack Developer | RA2211003010002 |
 
 ### Course Information
 - **Subject:** Software Engineering & Project Management (SEPM)

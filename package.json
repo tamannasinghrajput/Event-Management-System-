@@ -13,6 +13,6 @@
     "start:backend": "cd backend && npm start"
   },
   "keywords": ["srm", "events", "react", "express"],
-  "author": "Harsh Yadav",
+  "author": "Harsh Yadav, Tamanna Singh",
   "license": "MIT"
 }

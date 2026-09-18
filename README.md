@@ -90,7 +90,7 @@ srm-events-2k26/
 ### Clone and Setup
 
 ```bash
-git clone https://github.com/Harsh010801/srm-events-2k26.git
+git clone https://github.com/tamannasinghrajput/Event-Management-System-.git
 cd srm-events-2k26
 ```
 
@@ -175,8 +175,12 @@ npm run build
 
 MIT License
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 
 **Harsh Yadav**
 - SRM University
 - [GitHub](https://github.com/Harsh010801)
+
+**Tamanna Singh**
+- SRM University
+- [GitHub](https://github.com/tamannasinghrajput)

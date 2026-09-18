@@ -149,7 +149,7 @@ export function Footer() {
               © {currentYear} SRM University. All rights reserved.
             </p>
             <p className="text-white/30 text-sm">
-              Made with <span className="text-red-500">❤</span> by <span className="text-[#CDFF00] font-medium">Harsh</span>
+              Made with <span className="text-red-500">❤</span> by <span className="text-[#CDFF00] font-medium">Harsh</span> & <span className="text-[#CDFF00] font-medium">Tamanna</span>
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-white/30 hover:text-white/60 text-sm transition-colors">
